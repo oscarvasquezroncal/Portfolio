@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Navbar: React.FC = () => {
   const links = [
-    { name: 'Proyectos', href: '/' },
+    { name: 'Trabajo', href: '/' },
     { name: 'Sobre mí', href: '/about' },
     { name: 'Contacto', href: '/contact' },
   ];

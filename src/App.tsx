@@ -2,11 +2,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './Pages/Home';
-import Projects from './Pages/Projects';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
 import Error404 from './components/Error404';
-
 
 const App: React.FC = () => {
   return (
@@ -16,7 +14,6 @@ const App: React.FC = () => {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/projects" element={<Projects />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<Error404 />} />
@@ -29,4 +26,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-

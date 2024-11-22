@@ -1,0 +1,16 @@
+body {
+    @apply bg-background text-textDark font-sans;
+  }
+  
+  h1, h2, h3 {
+    @apply font-bold;
+  }
+  
+  p {
+    @apply leading-relaxed;
+  }
+  
+  a {
+    @apply text-accent underline hover:text-textDark;
+  }
+  

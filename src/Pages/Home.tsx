@@ -4,31 +4,31 @@ import { motion } from 'framer-motion';
 
 const Home: React.FC = () => {
   return (
-    <section className="min-h-screen flex items-center justify-between px-12 bg-background">
-      <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center gap-12">
-        {/* Texto con animación */}
+    <section className="min-h-screen flex items-center justify-between px-16 bg-background">
+      <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center gap-16">
+        {/* Texto con animaciones */}
         <motion.div
           className="md:w-1/2 text-center md:text-left"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-7xl font-extrabold text-textDark leading-tight mb-6">
+          <h1 className="text-8xl font-extrabold text-textDark leading-tight mb-8">
             Hola, soy Oscar
           </h1>
           <p className="text-2xl text-textSecondary leading-relaxed mb-8">
-            Full-Stack Developer passionate about building intuitive, meaningful experiences that connect people and technology.
+            Desarrollador Full-Stack apasionado por crear experiencias intuitivas y significativas que conecten personas y tecnología.
           </p>
           <motion.a
             href="/projects"
             className="text-accent text-xl font-semibold underline hover:text-textDark"
             whileHover={{ scale: 1.1 }}
           >
-            View My Work
+            Ver mis proyectos
           </motion.a>
         </motion.div>
 
-        {/* Animación de entrada para la ilustración */}
+        {/* Animación con espacio ajustado */}
         <motion.div
           className="md:w-1/2 flex justify-center"
           initial={{ opacity: 0, x: 50 }}

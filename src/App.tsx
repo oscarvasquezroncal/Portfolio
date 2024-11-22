@@ -5,6 +5,7 @@ import Home from './Pages/Home';
 import Projects from './Pages/Projects';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
+import Error404 from './components/Error404';
 
 
 const App: React.FC = () => {
@@ -18,6 +19,7 @@ const App: React.FC = () => {
             <Route path="/projects" element={<Projects />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<Error404 />} />
           </Routes>
         </main>
         <Footer />

@@ -10,7 +10,7 @@ export default {
           background: '#fefaf5',
           textDark: '#333333',
           textSecondary: '#555555',
-          accent: '#0056D6',
+          accent: '#ff6347', // Color del botón
         },
         fontFamily: {
           sans: ['Inter', 'sans-serif'],

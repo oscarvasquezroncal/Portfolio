@@ -1,35 +1,40 @@
 import React from 'react';
+import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-100 py-6">
       <div className="container mx-auto text-center">
-        {/* Enlaces de redes sociales */}
-        <div className="mb-4">
+        {/* Línea separadora */}
+        <hr className="border-t border-gray-300 mb-6" />
+
+        {/* Enlaces de redes sociales con íconos */}
+        <div className="mb-4 flex justify-center space-x-6">
           <a
-            href="https://www.linkedin.com/in/tu-perfil"
+            href="https://www.linkedin.com/in/oscar-alhdahir-vasquez-roncal-133140281/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 hover:text-gray-800 transition-colors duration-300 mx-2"
+            className="text-gray-600 hover:text-gray-800 transition-colors duration-300"
           >
-            LinkedIn
+            <FaLinkedin size={24} />
           </a>
           <a
-            href="https://github.com/tu-usuario"
+            href="https://github.com/theosquitar"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 hover:text-gray-800 transition-colors duration-300 mx-2"
+            className="text-gray-600 hover:text-gray-800 transition-colors duration-300"
           >
-            GitHub
+            <FaGithub size={24} />
           </a>
           <a
-            href="mailto:tuemail@example.com"
-            className="text-gray-600 hover:text-gray-800 transition-colors duration-300 mx-2"
+            href="mailto:oscarvasquezroncal@gmail.com"
+            className="text-gray-600 hover:text-gray-800 transition-colors duration-300"
           >
-            Email
+            <FaEnvelope size={24} />
           </a>
         </div>
-        {/* Derechos de autor */}
+
+        {/* Derechos reservados */}
         <div className="text-sm text-gray-500">
           © {new Date().getFullYear()} Oscar Alhdhair Vasquez Roncal. Todos los derechos reservados.
         </div>

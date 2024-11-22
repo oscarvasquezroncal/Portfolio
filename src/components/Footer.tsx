@@ -5,10 +5,9 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-100 py-6">
       <div className="container mx-auto text-center">
-        {/* Línea separadora */}
+
         <hr className="border-t border-gray-300 mb-6" />
 
-        {/* Enlaces de redes sociales con íconos */}
         <div className="mb-4 flex justify-center space-x-6">
           <a
             href="https://www.linkedin.com/in/oscar-alhdahir-vasquez-roncal-133140281/"
@@ -34,7 +33,6 @@ const Footer: React.FC = () => {
           </a>
         </div>
 
-        {/* Derechos reservados */}
         <div className="text-sm text-gray-500">
           © {new Date().getFullYear()} Oscar Alhdhair Vasquez Roncal. Todos los derechos reservados.
         </div>

@@ -2,36 +2,33 @@ import React from 'react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { motion } from 'framer-motion';
 import ScrollDownButton from '../components/ScrollDownButton';
-import ProjectCard from '../components/ProjectCard';
 
 const Home: React.FC = () => {
   const projects = [
     {
-      title: 'Proyecto 1',
-      description: 'Un breve resumen de este increíble proyecto.',
-      imageUrl: '/assets/proyecto1.jpg',
-      projectUrl: 'https://example.com/proyecto1',
+      title: 'MR Consultores',
+      description: 'Asesoría contable y empresarial para decisiones financieras sólidas.',
+      imageUrl: '/img/mr-consultores.jpg', 
+      projectUrl: 'https://mrconsultores.pe/',
     },
     {
-      title: 'Proyecto 2',
-      description: 'Otro proyecto fascinante en el que trabajé.',
-      imageUrl: '/assets/proyecto2.jpg',
-      projectUrl: 'https://example.com/proyecto2',
+      title: 'Axel Móvil',
+      description: 'Soluciones móviles y telecomunicaciones para empresas y usuarios.',
+      imageUrl: '/img/axel-movil.jpg', 
+      projectUrl: 'https://axelmovil.com/',
     },
     {
-      title: 'Proyecto 3',
-      description: 'Una solución innovadora y eficiente.',
-      imageUrl: '/assets/proyecto3.jpg',
-      projectUrl: 'https://example.com/proyecto3',
+      title: 'Integral 360',
+      description: 'Reparación y mantenimiento industrial especializado.',
+      imageUrl: '/img/integral360.jpg', 
+      projectUrl: 'https://integral360peru.com/',
     },
   ];
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Sección Principal */}
       <section className="relative min-h-screen flex items-center justify-center px-16 bg-background">
         <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center gap-16">
-          {/* Texto con animaciones */}
           <motion.div
             className="md:w-1/2 text-center md:text-left"
             initial={{ opacity: 0, x: -50 }}
@@ -44,16 +41,8 @@ const Home: React.FC = () => {
             <p className="text-2xl text-textSecondary leading-relaxed mb-8">
               Desarrollador Full-Stack apasionado por crear experiencias intuitivas y significativas que conecten personas y tecnología.
             </p>
-            <motion.a
-              href="#projects"
-              className="text-accent text-xl font-semibold underline hover:text-textDark"
-              whileHover={{ scale: 1.1 }}
-            >
-              Ver mis proyectos
-            </motion.a>
           </motion.div>
 
-          {/* Animación */}
           <motion.div
             className="md:w-1/2 flex justify-center"
             initial={{ opacity: 0, x: 50 }}
@@ -69,13 +58,11 @@ const Home: React.FC = () => {
           </motion.div>
         </div>
 
-        {/* Botón de desplazamiento */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
           <ScrollDownButton />
         </div>
       </section>
 
-      {/* Sección de Proyectos */}
       <section id="projects" className="container mx-auto py-16 px-8">
         <motion.h2
           className="text-4xl font-bold text-gray-800 mb-8 text-center"
@@ -83,21 +70,46 @@ const Home: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Proyectos
+          Proyectos Destacados
         </motion.h2>
         <motion.div
-          className="space-y-12"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
           {projects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
+            <motion.a
+              key={index}
+              href={project.projectUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
+              whileHover={{ scale: 1.05, boxShadow: '0px 10px 20px rgba(0,0,0,0.3)' }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <motion.div
+                className="relative"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+              >
+                <img
+                  src={project.imageUrl}
+                  alt={project.title}
+                  className="w-full h-72 object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-25 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+              </motion.div>
+              <div className="bg-white p-4">
+                <h3 className="text-2xl font-bold text-gray-800 mb-2">{project.title}</h3>
+                <p className="text-gray-600">{project.description}</p>
+              </div>
+            </motion.a>
           ))}
         </motion.div>
       </section>
 
-      {/* Sección de Contacto */}
       <section id="contact" className="py-16 px-8 text-center">
         <motion.h2
           className="text-4xl font-bold text-gray-800 mb-4"

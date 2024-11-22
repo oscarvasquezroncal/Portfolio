@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 import Home from './Pages/Home';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
-import Error404 from './components/Error404';
+import Error404 from './Pages/Error404';
 
 const App: React.FC = () => {
   return (
